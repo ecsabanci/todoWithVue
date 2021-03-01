@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        <span><h1>Todo List</h1></span>
+        <div class="add-part">
+            <input type="text" v-model="name">
+            <button type="submit" class="add-btn" @click="addTodo"><img src="./add.svg"></button>
+        </div>
+        <div class="todos">
+                
+                <ul class="items" v-for="(todo,index) in todos">
+                    
+                    <li><input type="checkbox"> {{todo.name}}</li>
+                    <button class="delete-btn" v-on:click="deleteTodo(index)">Delete</button>
+                </ul>
+                
+            
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

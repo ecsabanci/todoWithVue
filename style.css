@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgb(230, 245, 209);
+}
+
+li {
+    list-style: none;
+}
+span {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+#app {
+    height: 100vh;
+    width: 40vw;
+    background: rgb(215, 243, 173);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 5px 10px 8px 10px #888888;
+    border-radius: 5%;
+}
+
+
+.add-part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.add-part input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-part button {
+    background: transparent;
+    border: none;
+}
+
+.add-part button:active {
+    transform: scale(0.95);
+}
+.add-part button:focus {
+    outline: none;
+}
+
+.add-part button img {
+    width: 40px;
+}
+
+.todos {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.todos li {
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.items {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.delete-btn {
+    background: crimson;
+    color: #ffff;
+    padding: 0 5px;
+}
+.delete-btn:active{
+    transform: scale(0.95);
+}
+.delete-btn:focus{
+    outline: none;
+}
+
+
+@media only screen and (max-width: 1200px){
+    #app{
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 890px){
+    #app{
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #app{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 591px) {
+    #app {
+      width: 100vw;
+    }
+}
+
