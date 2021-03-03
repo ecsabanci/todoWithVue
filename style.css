@@ -16,6 +16,35 @@ span {
     margin: 0 auto;
     margin-bottom: 20px;
 }
+
+.done {
+    text-decoration: line-through;
+}
+
+.login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.login-input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.login-button img {
+    background: rgb(215, 243, 173);
+    width: 30px;
+}
+
 #app {
     height: 100vh;
     width: 40vw;
@@ -43,6 +72,7 @@ span {
     padding: 10px;
     border-radius: 10px;
     border: none;
+    outline: none;
 }
 
 .add-part button {
@@ -83,13 +113,18 @@ span {
 .delete-btn {
     background: crimson;
     color: #ffff;
-    padding: 0 5px;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 .delete-btn:active{
     transform: scale(0.95);
 }
 .delete-btn:focus{
     outline: none;
+}
+
+.checked span {
+    text-decoration: line-through;
 }
 
 
@@ -101,7 +136,7 @@ span {
 
 @media only screen and (max-width: 890px){
     #app{
-        width: 50vw;
+        width: 70vw;
     }
 }
 
