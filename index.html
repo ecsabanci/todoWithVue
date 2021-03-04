@@ -14,10 +14,10 @@
     <div id="app">
         
         <div class="login">
-            <label for=""><h1>Username</h1></label>
+            <h1>Username</h1>
             <div class="search">
-                <input  class="login-input" type="text" placeholder="e.g. ecsabancii@gmail.com">
-                <button @click="setUsername" type="submit" class="login-button"><img src="./search.svg" alt=""></button>
+                <input v-model="username" class="login-input" type="text" placeholder="e.g. ecsabancii@gmail.com">
+                <button @click="setUsername" type="submit" class="login-button"><img src="./search.svg"></button>
             </div>
         </div>
 
@@ -30,12 +30,13 @@
                 
                 <ul class="items" v-for="(todo,index) in todos">
                     
-                    <li><input type="checkbox" @click="changeStatus(index)"> <span :class="[todo.isDone ? 'done' : 'notDone']">{{todo.name}}</span> </li>
+                    <li><input type="checkbox" @click="changeStatus(index)"> <span :class="[todo.isDone ? 'done' : 'notDone']"> <em> {{todo.name}} </em></span> </li>
                     <button class="delete-btn" v-on:click="deleteTodo(index)">Delete</button>
                 </ul>
                 
             
         </div>
+
     </div>
 
 

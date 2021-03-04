@@ -7,7 +7,8 @@ window.addEventListener("load", () => {
     data: {
       token:"",
       name: "",
-      todos: []
+      todos: [],
+      username: ""
     },
     methods:{
       addTodo(){
@@ -38,8 +39,13 @@ window.addEventListener("load", () => {
       },
 
       setUsername(){
-        localStorage.setItem("username",this.username)
-        location.reload()
+        if(this.username == ""){
+          alert("Please enter a valid username")
+        } else {
+          localStorage.setItem("username",this.username)
+          location.reload()
+        }
+
       },
 
       changeStatus(index){
